@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "button_enricher_playbooks"
+version = "0.0.1"
+description = ""
+authors = ["Adam Antal <antaladam@protonmail.com>"]
+
+[tool.poetry.dev-dependencies]
+robusta-api = "^0.29"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
