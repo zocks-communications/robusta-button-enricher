@@ -1,7 +1,16 @@
 from typing import Dict, Any
 from collections import defaultdict
-from robusta.api import action, PrometheusKubernetesAlert, KubernetesResourceEvent, TemplatedButtonParams, Link
+from robusta.api import action, ActionParams, PrometheusKubernetesAlert, KubernetesResourceEvent, Link
 from string import Template
+
+
+class TemplatedButtonParams(ActionParams):
+    """
+    :var button_text: The templated text of the button
+    :var button_url: The templated URL of the button
+    """
+    button_text: str
+    button_url: str
 
 
 def _get_labels(event: KubernetesResourceEvent, default_value: str = "<missing>") -> Dict[str, Any]:
@@ -16,6 +25,7 @@ def _get_labels(event: KubernetesResourceEvent, default_value: str = "<missing>"
         labels["kind"] = labels["subject_type"].value
 
     return labels
+
 
 @action
 def button_enricher(event: KubernetesResourceEvent, params: TemplatedButtonParams):
