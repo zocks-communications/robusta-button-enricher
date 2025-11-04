@@ -1,5 +1,7 @@
 # robusta-button-enricher
 
+:warning: This repository is deprecated. From v0.29.1, the [button_enricher](https://docs.robusta.dev/master/playbook-reference/actions/event-enrichment.html#button-enricher) action is supported without any external dependencies. :warning:
+
 [Robusta](https://github.com/robusta-dev/robusta) is an amazing tool for enriching and enhancing your alerting system. This project is an [external action](https://docs.robusta.dev/master/playbook-reference/defining-playbooks/external-playbook-repositories.html#loading-external-actions) that allows you to enrich your alerts with buttons based on the alert context.
 
 ## Requirements
